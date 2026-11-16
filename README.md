@@ -49,6 +49,30 @@ Each tab's **Download HTML** button exports its current chart with Plotly includ
 Open the downloaded file in a browser to use hover and zoom offline. It captures
 the selected view; changing the Panel filters requires the running dashboard.
 
+## P2 and P3 Coursework
+
+`P2_categorical_interactive_transform.ipynb` includes a data-quality audit,
+categorical plots, title-length groups created with `apply()`, an interactive
+category/weekday heatmap, and a plan for joining verified publication metadata.
+
+`P3_interactive.ipynb` includes all eight interactive-visualization questions,
+a geographic feasibility check and choropleth plan, five example geocoding
+queries, a Panel widget, a mini dashboard, HTML export, and a reflection.
+The example cities are separate from the news data, which has no locations.
+
+Open either notebook from JupyterLab and run its cells in order. To serve the P3
+dashboard alongside the main EDA dashboard:
+
+```powershell
+.\.venv\Scripts\python.exe -m panel serve P3_interactive.ipynb --port 5007 --show
+```
+
+Keep `P3_geocoded_destinations.json` beside P3 to reuse its five cached geocoding
+results. If that file is missing, Q5 makes five rate-limited Nominatim queries;
+it needs an internet connection and caches only a complete successful result.
+Geocoding data is from OpenStreetMap contributors / Nominatim; attribution and
+service-policy links are included in the notebook.
+
 ## Repository Updates
 
 For a new clone, configure the upstream class repository and your group's origin:
