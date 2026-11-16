@@ -22,7 +22,7 @@ python -m venv .venv
 
 Choose the Python kernel from this environment and run the cells in order.
 The commented installation cell is optional when dependencies are already installed.
-`logistic_regression.ipynb` is the shared ML notebook. Its logistic regression
+`ml_models.ipynb` is the shared ML notebook. Its logistic regression
 section includes a stratified train/test split, a preprocessing pipeline,
 five-fold cross-validation, parameter selection, coefficient interpretation,
 and test-set evaluation against a majority-class reference. Random Forest,
@@ -30,7 +30,7 @@ Histogram Gradient Boosting, and the final three-model comparison have empty
 placeholders. Those sections must be completed to meet the full ML requirement.
 
 ```powershell
-.\.venv\Scripts\python.exe -m jupyter lab logistic_regression.ipynb
+.\.venv\Scripts\python.exe -m jupyter lab ml_models.ipynb
 ```
 
 ## Run the Dashboard
