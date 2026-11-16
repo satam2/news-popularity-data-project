@@ -1,0 +1,9 @@
+pandas
+numpy
+matplotlib
+seaborn>=0.13
+plotly
+panel
+scikit-learn
+jupyterlab
+ipykernel
