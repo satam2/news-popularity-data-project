@@ -1,8 +1,8 @@
 # Online News Popularity Dataset
 
-`EDA.ipynb` answers five exploratory questions and includes a Panel dashboard
-comparing article shares by news category and weekday/weekend publication.
-Keep `OnlineNewsPopularity.csv` in the same folder as the notebook.
+`P2_EDA_questions.ipynb` contains the data exploration and five project questions.
+`P3_interactive.ipynb` contains the interactive exercises and Panel dashboard.
+Keep `OnlineNewsPopularity.csv` in the same folder as the notebooks.
 
 ## Setup (Windows PowerShell)
 
@@ -17,11 +17,11 @@ python -m venv .venv
 ## Run the Notebook
 
 ```powershell
-.\.venv\Scripts\python.exe -m jupyter lab EDA.ipynb
+.\.venv\Scripts\python.exe -m jupyter lab P2_EDA_questions.ipynb
 ```
 
 Choose the Python kernel from this environment and run the cells in order.
-The commented installation cell is optional when dependencies are already installed.
+Dependencies are listed in `requirements.txt`.
 `ml_models.ipynb` is the shared ML notebook. Its logistic regression
 section includes a stratified train/test split, a preprocessing pipeline,
 five-fold cross-validation, parameter selection, coefficient interpretation,
@@ -39,7 +39,7 @@ be completed to meet the full ML requirement.
 ## Run the Dashboard
 
 ```powershell
-.\.venv\Scripts\python.exe -m panel serve EDA.ipynb --show
+.\.venv\Scripts\python.exe -m panel serve P3_interactive.ipynb --show
 ```
 
 Keep the terminal running while using the dashboard; press Ctrl+C to stop it.
@@ -54,27 +54,24 @@ the selected view; changing the Panel filters requires the running dashboard.
 
 ## P2 and P3 Coursework
 
-`P2_categorical_interactive_transform.ipynb` includes a data-quality audit,
-categorical plots, title-length groups created with `apply()`, an interactive
-category/weekday heatmap, and a plan for joining verified publication metadata.
+`P2_EDA_questions.ipynb` follows the updated upstream prompts: a data preview
+and quality audit, conditional filtering, an article-length scatter plot,
+a category distribution, and an interactive line plot with image counts in hover.
+It also preserves all five project EDA analyses, including category medians,
+title sentiment, and image/video combinations.
 
-`P3_interactive.ipynb` includes all eight interactive-visualization questions,
-a geographic feasibility check and choropleth plan, five example geocoding
-queries, a Panel widget, a mini dashboard, HTML export, and a reflection.
-The example cities are separate from the news data, which has no locations.
+`P3_interactive.ipynb` follows the updated interactive-visualization prompts.
+It includes a simple interactive comparison, a realistic choropleth plan and
+empty prototype table, three groups of numeric feature choices, a scatter plot
+with grouped X/Y selectors, the migrated dashboard, HTML export, and a reflection.
+The news dataset has no geographic measurements, so no article map is fabricated.
 
-Open either notebook from JupyterLab and run its cells in order. To serve the P3
-dashboard alongside the main EDA dashboard:
+Open either notebook from JupyterLab and run its cells in order. Each loads its
+own data and can run independently. To use a different dashboard port:
 
 ```powershell
 .\.venv\Scripts\python.exe -m panel serve P3_interactive.ipynb --port 5007 --show
 ```
-
-Keep `P3_geocoded_destinations.json` beside P3 to reuse its five cached geocoding
-results. If that file is missing, Q5 makes five rate-limited Nominatim queries;
-it needs an internet connection and caches only a complete successful result.
-Geocoding data is from OpenStreetMap contributors / Nominatim; attribution and
-service-policy links are included in the notebook.
 
 ## Repository Updates
 

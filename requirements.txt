@@ -4,7 +4,6 @@ matplotlib
 seaborn>=0.13
 plotly
 panel
-geopy>=2.4
 scikit-learn>=1.2
 jupyterlab
 ipykernel
