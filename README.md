@@ -25,9 +25,12 @@ The commented installation cell is optional when dependencies are already instal
 `ml_models.ipynb` is the shared ML notebook. Its logistic regression
 section includes a stratified train/test split, a preprocessing pipeline,
 five-fold cross-validation, parameter selection, coefficient interpretation,
-and test-set evaluation against a majority-class reference. Random Forest,
-Histogram Gradient Boosting, and the final three-model comparison have empty
-placeholders. Those sections must be completed to meet the full ML requirement.
+and test-set evaluation against a majority-class reference. The Histogram Gradient
+Boosting section uses the same features, split, folds, and metrics, with a small
+parameter search, early stopping, and test-set evaluation. A preliminary table
+compares the two completed model types using cross-validation. Random Forest and
+the final three-model comparison remain empty placeholders; those sections must
+be completed to meet the full ML requirement.
 
 ```powershell
 .\.venv\Scripts\python.exe -m jupyter lab ml_models.ipynb
